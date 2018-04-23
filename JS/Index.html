@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Example</title>
+    <meta charset="utf-8" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!--<![endif]-->
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+    <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/15.2.7/js/dx.webappjs.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="http://cdn3.devexpress.com/jslib/15.2.7/css/dx.common.css" />
+    <link rel="stylesheet" type="text/css" href="http://cdn3.devexpress.com/jslib/15.2.7/css/dx.light.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    
+    <script type="text/javascript" src="data.js"></script>
+    <style type="text/css">
+        .dx-command-edit .dx-link {
+            visibility: hidden;
+        }
+
+        .dx-state-hover .dx-command-edit .dx-link, .dx-selection .dx-command-edit .dx-link {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <div id="gridContainer"></div>
+
+    <script type="text/javascript">
+        $("#gridContainer").dxDataGrid({
+            dataSource: employees,
+            paging: {
+                enabled: false
+            },
+            editing: {
+                mode: "form",
+                allowUpdating: true,
+                allowDeleting: true
+            },
+            selection: {
+                mode: "single"
+            },
+            hoverStateEnabled: true,
+            columns: [
+                {
+                    dataField: "Prefix",
+                    caption: "Title",
+                    width: 70
+                },
+                "FirstName",
+                "LastName", {
+                    dataField: "Position",
+                    width: 170
+                }, {
+                    dataField: "BirthDate",
+                    dataType: "date"
+                }
+            ]
+        });
+    </script>
+</body>
+</html>
