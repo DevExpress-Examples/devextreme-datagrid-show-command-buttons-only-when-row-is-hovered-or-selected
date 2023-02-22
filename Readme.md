@@ -11,6 +11,8 @@ This example demonstrates how to show command buttons only when a row is hovere
 **[[Run Online]](https://codecentral.devexpress.com/128583286/)**
 <!-- run online end -->
 
+<div align="center"><img alt="DevExtreme DataGrid - How to show command buttons only when a row is hovered/selected" src="datagrid-display-command-buttons.png" /></div>
+
 ## Files to Review
 
 - **JS**
