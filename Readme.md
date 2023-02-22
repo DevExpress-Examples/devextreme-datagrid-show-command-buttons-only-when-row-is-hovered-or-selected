@@ -9,7 +9,7 @@
 <!-- default file list end -->
 # dxDataGrid - How to show command buttons only when a row is hovered/selected
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t358945/)**
+**[[Run Online]](https://codecentral.devexpress.com/128583286/)**
 <!-- run online end -->
 
 
