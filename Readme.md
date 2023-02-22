@@ -3,18 +3,19 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T358945)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
 
-<!-- default file list end -->
-# dxDataGrid - How to show command buttons only when a row is hovered/selected
+# DevExtreme DataGrid - How to show command buttons only when a row is hovered/selected
+This example demonstrates how to show command buttons only when a row is hovered/selected.<br/>
+
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/128583286/)**
 <!-- run online end -->
 
+## Files to Review
 
-This example demonstrates how to show command buttons only when a row is hovered/selected.
+- **JS**
+    - [Index.html](./JS/Index.html)
 
-<br/>
+## Documentation
 
-
+- [DataGrid - API Reference](https://js.devexpress.com/Documentation/ApiReference/UI_Components/dxDataGrid/)
