@@ -7,9 +7,6 @@
 # DataGrid for DevExtreme - How to show command buttons only when a row is hovered/selected
 This example demonstrates how to show command buttons only when a row is hovered/selected.<br/>
 
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/128583286/)**
-<!-- run online end -->
 
 <div align="center"><img alt="DevExtreme DataGrid - How to show command buttons only when a row is hovered/selected" src="datagrid-display-command-buttons.png" /></div>
 
