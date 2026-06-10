@@ -1,28 +1,53 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
-
 import 'devextreme/dist/css/dx.material.blue.light.compact.css';
-import DxButton from 'devextreme-vue/button';
-
-const props = defineProps({
-  text: {
-    type: String,
-    default: 'count',
-  },
-});
-const count = ref(0);
-const buttonText = computed < string > (
-  () => `Click ${props.text}: ${count.value}`
-);
-function clickHandler() {
-  count.value += 1;
-}
+import {
+  DxColumn,
+  DxDataGrid,
+  DxEditing,
+  DxPaging,
+  DxSelection,
+} from 'devextreme-vue/data-grid';
+import { employees } from '../data';
 </script>
 <template>
   <div>
-    <DxButton
-      :text="buttonText"
-      @click="clickHandler"
-    />
+    <DxDataGrid
+      :data-source="employees"
+      key-expr="ID"
+      :hover-state-enabled="true"
+    >
+      <DxPaging :enabled="false"/>
+      <DxEditing
+        mode="form"
+        :allow-updating="true"
+        :allow-deleting="true"
+      />
+      <DxSelection mode="single"/>
+      <DxColumn
+        data-field="Prefix"
+        caption="Title"
+        :width="70"
+      />
+      <DxColumn data-field="FirstName"/>
+      <DxColumn data-field="LastName"/>
+      <DxColumn
+        data-field="Position"
+        :width="170"
+      />
+      <DxColumn
+        data-field="BirthDate"
+        data-type="date"
+      />
+    </DxDataGrid>
   </div>
 </template>
+<style>
+.dx-command-edit .dx-link {
+  visibility: hidden;
+}
+
+.dx-state-hover .dx-command-edit .dx-link,
+.dx-selection .dx-command-edit .dx-link {
+  visibility: visible;
+}
+</style>
