@@ -5,3 +5,12 @@
 body {
     margin: 8px;
 }
+
+.dx-command-edit .dx-link {
+    visibility: hidden;
+}
+
+.dx-state-hover .dx-command-edit .dx-link,
+.dx-selection .dx-command-edit .dx-link {
+    visibility: visible;
+}
