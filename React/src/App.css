@@ -2,3 +2,12 @@
   margin: 50px;
   width: 90vw;
 }
+
+.dx-command-edit .dx-link {
+  visibility: hidden;
+}
+
+.dx-state-hover .dx-command-edit .dx-link,
+.dx-selection .dx-command-edit .dx-link {
+  visibility: visible;
+}
