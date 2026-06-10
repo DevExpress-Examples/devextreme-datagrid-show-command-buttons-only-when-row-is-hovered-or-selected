@@ -1,21 +1,18 @@
 import { Component } from '@angular/core';
-import { DxButtonModule, DxButtonTypes } from 'devextreme-angular/ui/button';
+import { DxDataGridModule } from 'devextreme-angular/ui/data-grid';
+import { Employee, Service } from './app.service';
 
 @Component({
     selector: 'app-root',
-    imports: [DxButtonModule],
+    imports: [DxDataGridModule],
+    providers: [Service],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'Angular';
+  employees: Employee[];
 
-  counter = 0;
-
-  buttonText = 'Click count: 0';
-
-  onClick(_e: DxButtonTypes.ClickEvent): void {
-    this.counter++;
-    this.buttonText = `Click count: ${this.counter}`;
+  constructor(service: Service) {
+    this.employees = service.getEmployees();
   }
 }

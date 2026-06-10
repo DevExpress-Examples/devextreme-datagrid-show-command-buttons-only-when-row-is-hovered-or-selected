@@ -1,3 +1,20 @@
 <div class="default-style">
-  <dx-button [text]="buttonText" (onClick)="onClick($event)"></dx-button>
+  <dx-data-grid
+    [dataSource]="employees"
+    keyExpr="ID"
+    [hoverStateEnabled]="true"
+  >
+    <dxo-paging [enabled]="false"></dxo-paging>
+    <dxo-editing
+      mode="form"
+      [allowUpdating]="true"
+      [allowDeleting]="true"
+    ></dxo-editing>
+    <dxo-selection mode="single"></dxo-selection>
+    <dxi-column dataField="Prefix" caption="Title" [width]="70"></dxi-column>
+    <dxi-column dataField="FirstName"></dxi-column>
+    <dxi-column dataField="LastName"></dxi-column>
+    <dxi-column dataField="Position" [width]="170"></dxi-column>
+    <dxi-column dataField="BirthDate" dataType="date"></dxi-column>
+  </dx-data-grid>
 </div>
